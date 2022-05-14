@@ -9,7 +9,7 @@
 ## 💡 Inspiration
 
 ## 💻 What it does
-
+Pirates of the storm is a free web fun game .Here  the person  is on a pirated ship for escaping he need to solve the  hidden mystery and   hidden flag . we can also enjoy  the 3D model of the ship  which create by using an 'augmented reality' where players search the hidden flag and go to next level .
 ## ⚙️ How we built it
 
 - React Js: For frontend
