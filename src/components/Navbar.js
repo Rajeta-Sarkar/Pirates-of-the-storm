@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { isAuthenticated, login, logout } from "../utils/auth";
@@ -18,7 +18,7 @@ export default function Navbar() {
     return (
         <div >
             <nav className="flex items-center py-2 flex-wrap px-4 text-fontColor tracking-wide">
-                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl cursor-pointer font-base text-white">Pirates of the storm
+                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl cursor-pointer font-semibold text-white">Pirates of the storm
                 </span></Link>
                 <button className="lg:hidden right-0 absolute md:px-8 px-6 mr-1 mb-1 ease-linear transition-all duration-150" type="button" onClick={() => setShowNavbar(true)} aria-hidden="false" aria-label="button">
                     <HiOutlineMenuAlt3 className="h-7 w-7" aria-hidden="false" />

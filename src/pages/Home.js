@@ -1,12 +1,40 @@
 import React from "react"
 import HeroImg from '../assets/hero.svg'
 import FeatImg from '../assets/feat.svg'
+import { HiX } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 
 export default function Home() {
 
+  const [showCode, setShowCode] = React.useState(false);
+
   return (
     <div className='md:mx-28 mx-4 text-white pt-10 pb-12'>
+
+      {showCode ? null : (
+        <div>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          >
+            <div className="relative my-6  w-96">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full dark:bg-gray-800 bg-secondary outline-none focus:outline-none">
+                <div className="flex items-start justify-between p-5 border-solid rounded-t">
+                  <div className="text-3xl font-base tracking-wide cursor-pointer">
+                    You found a secret!
+                  </div>
+
+                  <button className="absolute right-6" onClick={() => setShowCode(true)} aria-label="button">
+                    <HiX className="h-7 w-7" aria-hidden="false" />
+                  </button>
+
+                </div>
+                Message
+              </div>
+            </div>
+          </div>
+
+          <div className="opacity-25 fixed inset-0 z-40 h-screen bg-black"></div>
+        </div>
+      )}
 
       <div className='md:grid md:grid-cols-2 items-center pt-10'>
         <div className=''>
