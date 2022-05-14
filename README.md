@@ -4,8 +4,6 @@
 
 ## 📌Tagline
 
-- The soul breakers curse
-
 ## 💡 Inspiration
 
 ## 💻 What it does
@@ -33,9 +31,16 @@ Pirates of the storm is a free web fun game .Here  the person  is on a pirated s
 
 ## 🧠 Challenges we ran into
 
+- Finding the best 3D model for the game.
+- Rendering the 3D model.
+- Creating and animating the game.
+- Adding the AR functionality.
+
 ## 🏅 Accomplishments that we're proud of
 
 - Completing the project in the given time frame.
+- How to make a game with Js.
+- Working with Three.js.
 
 ## 📖 What we learned
 
