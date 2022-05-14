@@ -7,10 +7,18 @@ export default function Navbar() {
 
     const [showNavbar, setShowNavbar] = React.useState(false);
 
+    const [auth, setAuth] = useState(isAuthenticated());
+    console.log(auth)
+
+    const handleAuth = async (accessLevel, isLogin) => {
+        isLogin ? login(accessLevel) : logout();
+        setAuth(isAuthenticated());
+    };
+
     return (
         <div >
-            <nav className="flex items-center py-2 flex-wrap px-4 text-fontColor tracking-wider">
-                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl md:text-5xl cursor-pointer font-base text-white">Good Space
+            <nav className="flex items-center py-2 flex-wrap px-4 text-fontColor tracking-wide">
+                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl cursor-pointer font-base text-white">Pirates of the storm
                 </span></Link>
                 <button className="lg:hidden right-0 absolute md:px-8 px-6 mr-1 mb-1 ease-linear transition-all duration-150" type="button" onClick={() => setShowNavbar(true)} aria-hidden="false" aria-label="button">
                     <HiOutlineMenuAlt3 className="h-7 w-7" aria-hidden="false" />
@@ -24,7 +32,7 @@ export default function Navbar() {
                                     <div className="flex items-start justify-between p-5 border-solid rounded-t">
                                         <Link activeClass="active" to="about" spy={true} smooth={true} offset={-150} duration={250}>
                                             <div className="text-2xl font-base tracking-wide cursor-pointer">
-                                                Good Space
+                                                Pirates of the storm
                                             </div>
                                         </Link>
 
@@ -45,27 +53,15 @@ export default function Navbar() {
                                             <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Home</span>
                                         </Link>
 
-                                        <Link to="/music">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Music</span>
+                                        <Link to="/findTheSoul">
+                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Find the soul</span>
                                         </Link>
 
-                                        <Link to="/journal">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Journal</span>
+                                        <Link to="/soulBreaker">
+                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Soul breaker</span>
                                         </Link>
 
-                                        <Link to="/chat">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Chat</span>
-                                        </Link>
-
-                                        <Link to="/exercise">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Exercise</span>
-                                        </Link>
-
-                                        <Link to="/profile">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Profile</span>
-                                        </Link>
-
-                                        <button className='bg-blue-600 text-white py-2 px-8 rounded-md ml-2' onClick={() => auth.signOut()}>
+                                        <button className='bg-blue-600 text-white py-2 px-8 rounded-md ml-2' onClick={() => handleAuth(4, false)}>
                                             Logout
                                         </button>
 
@@ -86,29 +82,15 @@ export default function Navbar() {
                             <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Home</span>
                         </Link>
 
-                        <Link to="/music">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Music</span>
+                        <Link to="/findTheSoul">
+                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Find The soul</span>
                         </Link>
 
-                        <Link to="/journal">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Journal</span>
+                        <Link to="/soulBreaker">
+                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Soul breaker</span>
                         </Link>
 
-                        <Link to="/chat">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Chat</span>
-                        </Link>
-
-                        <Link to="/exercise">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Exercise</span>
-                        </Link>
-
-                        <Link to="/profile">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Profile</span>
-                        </Link>
-
-                        <button className='bg-[#6F5DE0] text-white py-2 px-8 rounded-md' onClick={() => auth.signOut()}>
-                            Logout
-                        </button>
+                        <button className='bg-[#6F5DE0] text-white py-2 px-8 rounded-md' onClick={() => handleAuth(4, false)}>Logout</button>
 
                     </div>
                 </div>
