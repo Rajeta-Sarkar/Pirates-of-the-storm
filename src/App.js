@@ -3,7 +3,7 @@ import { isAuthenticated } from "./utils/auth";
 import Main from "./container/Main";
 import Login from "./pages/Login";
 
-const Hero = () => {
+const App = () => {
 
   const [auth, setAuth] = useState(isAuthenticated());
   console.log(setAuth)
@@ -19,4 +19,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default App;
