@@ -3,13 +3,17 @@
 ## The soul breakers curse
 
 ## 📌Tagline
-Real gaming takes the stage.
+
+Real gaming takes the stage with a perfect combination of logical thinking via riddles and the fun of gaming.
 
 ## 💡 Inspiration
-The scenario of gaming now a days is more likely to be addictive. The purpose of gaming is to rewind and to spend some leasure time in a way which is enjoyable. The game we created is to spend the free time playing games which aren't addictive and hence it gave us an inspiration.
+
+The scenario of gaming nowadays is more likely to be addictive. The purpose of gaming is to rewind and to spend some leisure time enjoyably. The game we created is to spend our free time playing games that aren't addictive and hence it inspired us. The game is a perfect combination of logical thinking via riddles and the fun of gaming.
 
 ## 💻 What it does
-Pirates of the storm is a free web fun game .Here  the person  is on a pirated ship for escaping he need to solve the  hidden mystery and   hidden flag . we can also enjoy  the 3D model of the ship  which create by using an 'augmented reality' where players search the hidden flag and go to next level .
+
+Pirates of the storm is a free web fun game. In the game, the player needs to release their soul and find the way out of the game. The game is divided into two plotlines. The first: **Find the Soul** is the main plot where the player finds pieces of their soul by solving riddles in an interactive 3D Model of a Pirate Ship which can be viewed in Augmented Reality. The second: **Soul Breaker** is the plot where the players fight the Soul Breaker to find the key to release their souls. Key found can then be used to redeem your soul and set the curse free.
+
 ## ⚙️ How we built it
 
 - React Js: For frontend
@@ -19,7 +23,7 @@ Pirates of the storm is a free web fun game .Here  the person  is on a pirated s
 
 ## 🌐 Best Domain Name from GoDaddy Registry [APAC Only]
 
-- Register a domain name with .co, .us from GoDaddy.
+- gaming-made-fun-with.us
 
 ## 🔐 Best Use of DeSo
 
@@ -28,31 +32,32 @@ Pirates of the storm is a free web fun game .Here  the person  is on a pirated s
 ## 🌐 Best Domain Name from Domain.com
 
 - Register a domain name with .tech from Domain.com.
-- gaming-made-fun-with.us
 
 ## 🍻 Dream Big and Create More Cheers with AB InBev
 
 ## 🧠 Challenges we ran into
 
-- Finding the best 3D model for the game.
 - Rendering the 3D model.
-- Creating and animating the game.
 - Adding the AR functionality.
+- Creating and animating the game.
+- Finding the best 3D model for the game.
 
 ## 🏅 Accomplishments that we're proud of
 
-- Completing the project in the given time frame.
-- How to make a game with Js.
 - Working with Three.js.
+- How to make a game with Js.
+- Completing the project in the given time frame.
 
 ## 📖 What we learned
 
-- Collaboration with other developers.
+- How to use the echo3D library.
 - Efficient use of GitHub actions.
+- Collaboration with other developers.
 
 ## 🚀 What's next for Pirates of the storm
 
 - Building a mobile app
+- Add more riddles and 3D models
 
 ## 🏃🏻‍♂️ Installing and Running Locally
 
