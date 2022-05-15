@@ -115,7 +115,7 @@ charactersMap.forEach((row, i) => {
 })
 
 const image = new Image()
-image.src = './img/Pellet Town.png'
+image.src = './img/Pirate Cove Town.png'
 
 const foregroundImage = new Image()
 foregroundImage.src = './img/foregroundObjects.png'
