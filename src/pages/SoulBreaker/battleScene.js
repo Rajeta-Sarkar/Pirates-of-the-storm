@@ -8,7 +8,7 @@ const battleBackground = new Sprite({
   image: battleBackgroundImage
 })
 
-let draggle
+let Soulbreaker
 let emby
 let renderedSprites
 let battleAnimationId
@@ -21,9 +21,9 @@ function initBattle() {
   document.querySelector('#playerHealthBar').style.width = '100%'
   document.querySelector('#attacksBox').replaceChildren()
 
-  draggle = new Monster(monsters.Draggle)
+  Soulbreaker = new Monster(monsters.Soulbreaker)
   emby = new Monster(monsters.Emby)
-  renderedSprites = [draggle, emby]
+  renderedSprites = [Soulbreaker, emby]
   queue = []
 
   emby.attacks.forEach((attack) => {
@@ -38,13 +38,13 @@ function initBattle() {
       const selectedAttack = attacks[e.currentTarget.innerHTML]
       emby.attack({
         attack: selectedAttack,
-        recipient: draggle,
+        recipient: Soulbreaker,
         renderedSprites
       })
 
-      if (draggle.health <= 0) {
+      if (Soulbreaker.health <= 0) {
         queue.push(() => {
-          draggle.faint()
+          Soulbreaker.faint()
         })
         queue.push(() => {
           // fade back to black
@@ -66,12 +66,14 @@ function initBattle() {
         })
       }
 
-      // draggle or enemy attacks right here
+      // Soulbreaker or enemy attacks right here
       const randomAttack =
-        draggle.attacks[Math.floor(Math.random() * draggle.attacks.length)]
+        Soulbreaker.attacks[
+          Math.floor(Math.random() * Soulbreaker.attacks.length)
+        ]
 
       queue.push(() => {
-        draggle.attack({
+        Soulbreaker.attack({
           attack: randomAttack,
           recipient: emby,
           renderedSprites
@@ -94,7 +96,7 @@ function initBattle() {
                 gsap.to('#overlappingDiv', {
                   opacity: 0
                 })
-
+``
                 battle.initiated = false
                 audio.Map.play()
               }

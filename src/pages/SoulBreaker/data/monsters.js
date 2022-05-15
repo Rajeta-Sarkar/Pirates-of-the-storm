@@ -15,13 +15,13 @@ const monsters = {
     name: 'Emby',
     attacks: [attacks.Tackle, attacks.Fireball]
   },
-  Draggle: {
+  Soulbreaker: {
     position: {
       x: 800,
       y: 100
     },
     image: {
-      src: './img/draggleSprite.png'
+      src: './img/SoulbreakerSprite.png'
     },
     frames: {
       max: 4,
@@ -29,7 +29,7 @@ const monsters = {
     },
     animate: true,
     isEnemy: true,
-    name: 'Draggle',
+    name: 'Soulbreaker',
     attacks: [attacks.Tackle, attacks.Fireball]
   }
 }
