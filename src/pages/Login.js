@@ -27,15 +27,15 @@ function LogIn() {
 
                     <div className="md:flex md:flex-col md:justify-center lg:pr-16">
 
-                        <h2 className="mb-4 text-[2.6rem] self-center font-bold tracking-wider text-white">
+                        <h2 className="mb-4 text-[2.4rem] self-center font-bold tracking-wider text-white">
                             Pirates of the storm
                         </h2>
 
                         <div className='grid place-items-center'>
-                            <div className="w-56 h-56 my-5 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300 cursor-pointer shadow-lg">
+                            <div className="w-60 h-60 my-5 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300 cursor-pointer shadow-lg">
                                 <div className="flex items-center justify-center h-full bg-white hover:bg-gray-100" onClick={() => handleAuth(4, true)}>
                                     <img src={DeSOImg} alt="google" className="w-6" />
-                                    <span className="ml-4 text-lg">Sign in with DeSo</span>
+                                    <span className="ml-2 text-lg">Sign in with DeSo</span>
                                 </div>
                             </div>
                         </div>
