@@ -2,9 +2,10 @@
 
 ## The soul breakers curse
 
-## 📌Tagline
+## 📌 Tagline
 
-Pirates of the storm : The soul breakers curse is a fun free web game that indulges the player in engaging storyline and interactive gameplay that requires wits and guts of a pirate.So put on your pirate hats and join us alog this adventure.Ahoy there matey!
+Pirates of the storm: The soul breakers curse is a fun free web game that indulges the player in an engaging storyline and interactive gameplay that requires the wits and guts of a pirate. So put on your pirate hats and join us along this adventure. Ahoy there matey!
+
 ## 💡 Inspiration
 
 The scenario of gaming nowadays is more likely to be addictive. The purpose of gaming is to rewind and to spend some leisure time enjoyably. The game we created is to spend our free time playing games that aren't addictive and hence it inspired us. The game is a perfect combination of logical thinking via riddles and the fun of gaming.
