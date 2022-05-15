@@ -64,18 +64,143 @@ function Details() {
 
   const snap = useSnapshot(state)
 
-  return (
-    <div>{snap.current}</div>
-    // 18_-_Default == ship base
-    // 02_-_Default == mast
-    // 05_-_Default == cannon
-    // 03_-_Default == stering wheel
-  )
+  // For Quest1
+
+  const refQuest1 = useRef(null);
+  const [messageQuest1, setMessageQuest1] = useState("");
+  const [validQuest1, setValidQuest1] = useState(false);
+
+  const getInputValueQuest1 = (e) => {
+    e.preventDefault();
+    const userValueQuest1 = refQuest1.current.value;
+    if (userValueQuest1 === "Piano") {
+      setValidQuest1(true);
+      setMessageQuest1("You got the right answer!");
+    } else {
+      setValidQuest1(false);
+      setMessageQuest1("Wrong answer! Try again!");
+    }
+  }
+
+  // For Quest2
+
+  const refQuest2 = useRef(null);
+  const [messageQuest2, setMessageQuest2] = useState("");
+  const [validQuest2, setValidQuest2] = useState(false);
+
+  const getInputValueQuest2 = (e) => {
+    e.preventDefault();
+    const userValueQuest2 = refQuest2.current.value;
+    if (userValueQuest2 === "Piano") {
+      setValidQuest2(true);
+      setMessageQuest2("You got the right answer!");
+    } else {
+      setValidQuest2(false);
+      setMessageQuest2("Wrong answer! Try again!");
+    }
+  }
+
+  // For Quest3
+
+  const refQuest3 = useRef(null);
+  const [messageQuest3, setMessageQuest3] = useState("");
+  const [validQuest3, setValidQuest3] = useState(false);
+
+  const getInputValueQuest3 = (e) => {
+    e.preventDefault();
+    const userValueQuest3 = refQuest3.current.value;
+    if (userValueQuest3 === "Piano") {
+      setValidQuest3(true);
+      setMessageQuest3("You got the right answer!");
+    } else {
+      setValidQuest3(false);
+      setMessageQuest3("Wrong answer! Try again!");
+    }
+  }
+
+  // For Quest 4
+
+  const refQuest4 = useRef(null);
+  const [messageQuest4, setMessageQuest4] = useState("");
+  const [validQuest4, setValidQuest4] = useState(false);
+
+  const getInputValueQuest4 = (e) => {
+    e.preventDefault();
+    const userValueQuest4 = refQuest4.current.value;
+    if (userValueQuest4 === "Stairs") {
+      setValidQuest4(true);
+      setMessageQuest4("You got the right answer!");
+    } else {
+      setValidQuest4(false);
+      setMessageQuest4("Wrong answer! Try again!");
+    }
+  }
+  // Mast
+  if (snap.current === "02_-_Default") {
+    return (
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+        You got the 1<sup>st</sup> right answer!!<br />
+        Hint for next object: I control the ship to its destination, in the right hinds I challange the currents.
+      </div>
+    )
+  }
+  // Ship staring wheel: Helm
+  else if (snap.current === "03_-_Default") {
+    return (
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+        You got the 2<sup>nd</sup> right answer!!<br />
+        Hint for next object: Challange me and you you will say shiver me tibmers.
+      </div>
+    )
+  }
+  // Cannon
+  else if (snap.current === "05_-_Default") {
+    return (
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+        You got the 3<sup>rd</sup> right answer!!<br />
+        Hint for next object: I carry your mighty pirates, challange me once and I will show you the fury of my cannons.
+      </div>
+    )
+  }
+  // Ship base
+  else if (snap.current === "18_-_Default") {
+    return (
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+        You got the all answer!!<br />
+        Now you have find your soul, challange the SoulBreaker to release it.
+      </div>
+    )
+  }
+  else {
+    <div className="hidden">
+
+    </div>
+  }
+
+  // return (
+  //   <div>{snap.current}</div>
+  //   // 02_-_Default == mast
+  //   // 03_-_Default == stering wheel
+  //   // 05_-_Default == cannon
+  //   // 18_-_Default == ship base
+  // )
 }
 
 export default function FindTheSoul() {
   return (
     <div>
+
+      <div className="grid place-items-center">
+
+        <div className="py-2 text-4xl font-semibold text-white">
+          Welcome to Find the Soul
+        </div>
+
+        <p className="text-lg text-white m-3">Welcome to the first level: <span className="font-bold">Find the Soul</span> is the main plot where the player finds pieces of their soul by solving riddles in an interactive 3D Model of a Pirate Ship which can be viewed in Augmented Reality.</p>
+
+        <p className="text-lg text-white m-3">Hint: I am a tall spar, or arrangement of spars, erected more or less vertically on the centre-line of a ship or boat. What I am?</p>
+
+      </div>
 
       <div className="group absolute w-48 top-24 left-3 z-100">
         <h1 className="bg-white px-2 py-1 rounded-lg text-xl text-center cursor-pointer">
@@ -93,7 +218,7 @@ export default function FindTheSoul() {
         </div>
       </div>
 
-      <div className="w-full h-screen outline-none cursor-grab lg:block mx-16">
+      <div className="w-full h-screen outline-none cursor-grab lg:block px-16">
         <Canvas shadows dpr={[1, 2]} camera={{ position: [10, 6, 3], fov: 50 }}>
           <ambientLight intensity={0.7} />
           <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
@@ -106,7 +231,7 @@ export default function FindTheSoul() {
         </Canvas>
       </div>
 
-      <div>
+      <div className="absolute top-64 right-3 w-128">
         <Details />
       </div>
 

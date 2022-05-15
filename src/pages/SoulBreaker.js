@@ -3,7 +3,7 @@ import { HiX } from "react-icons/hi";
 
 export default function SoulBreaker() {
 
-  const [showCode, setShowCode] = React.useState(false);
+  const [showSpell, setShowSpell] = React.useState(false);
   const ref = useRef(null);
 
   const [message, setMessage] = useState("");
@@ -43,10 +43,10 @@ export default function SoulBreaker() {
       </div>
 
       <div className="grid place-items-center py-4">
-        <button className='bg-blue-600 text-white py-2 px-8 rounded-md text-xl md:text-2xl' onClick={() => setShowCode(true)}>Enter Spell</button>
+        <button className='bg-blue-600 text-white py-2 px-8 rounded-md text-xl md:text-2xl' onClick={() => setShowSpell(true)}>Enter Spell</button>
       </div>
 
-      {showCode ? (
+      {showSpell ? (
         <div>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
@@ -57,7 +57,7 @@ export default function SoulBreaker() {
                     Enter the spell and free your soul!
                   </div>
 
-                  <button className="absolute right-6 text-white" onClick={() => setShowCode(false)} aria-label="button">
+                  <button className="absolute right-6 text-white" onClick={() => setShowSpell(false)} aria-label="button">
                     <HiX className="h-7 w-7" aria-hidden="false" />
                   </button>
 
@@ -76,7 +76,12 @@ export default function SoulBreaker() {
                     <div className='text-center'>
                       {message && <div>
                         <p className={valid ? "text-green-500 " : "text-red-400"} >{message}</p>
-                        <iframe title="YT" width="420" height="315" src="https://www.youtube.com/embed/2qm7b1GCQ74" className={valid ? "block" : "hidden"}></iframe>
+                        <a href="/Captain_Jack_Sparrow_Run.mp4" target="_blank" className={valid ? "block" : "hidden"} >
+                          <button className='bg-blue-600 my-2 text-white py-2 px-8 rounded-md ml-2'>
+                            Run
+                          </button>
+                        </a>
+                        {/* <iframe title="YT" width="420" height="315" src="https://www.youtube.com/embed/2qm7b1GCQ74" className={valid ? "block" : "hidden"}></iframe> */}
                       </div>}
                     </div>
                   </div>
