@@ -1,9 +1,8 @@
 import React, { Suspense, useRef, useState } from "react"
-import { HiX } from "react-icons/hi";
 import * as THREE from 'three'
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Canvas } from "@react-three/fiber"
-import { ContactShadows, Environment, useGLTF, OrbitControls, useAnimations } from "@react-three/drei"
+import { ContactShadows, Environment, useGLTF, OrbitControls } from "@react-three/drei"
 import { proxy, useSnapshot } from "valtio"
 
 const state = proxy({
@@ -64,81 +63,10 @@ function Details() {
 
   const snap = useSnapshot(state)
 
-  // For Quest1
-
-  const refQuest1 = useRef(null);
-  const [messageQuest1, setMessageQuest1] = useState("");
-  const [validQuest1, setValidQuest1] = useState(false);
-
-  const getInputValueQuest1 = (e) => {
-    e.preventDefault();
-    const userValueQuest1 = refQuest1.current.value;
-    if (userValueQuest1 === "Piano") {
-      setValidQuest1(true);
-      setMessageQuest1("You got the right answer!");
-    } else {
-      setValidQuest1(false);
-      setMessageQuest1("Wrong answer! Try again!");
-    }
-  }
-
-  // For Quest2
-
-  const refQuest2 = useRef(null);
-  const [messageQuest2, setMessageQuest2] = useState("");
-  const [validQuest2, setValidQuest2] = useState(false);
-
-  const getInputValueQuest2 = (e) => {
-    e.preventDefault();
-    const userValueQuest2 = refQuest2.current.value;
-    if (userValueQuest2 === "Piano") {
-      setValidQuest2(true);
-      setMessageQuest2("You got the right answer!");
-    } else {
-      setValidQuest2(false);
-      setMessageQuest2("Wrong answer! Try again!");
-    }
-  }
-
-  // For Quest3
-
-  const refQuest3 = useRef(null);
-  const [messageQuest3, setMessageQuest3] = useState("");
-  const [validQuest3, setValidQuest3] = useState(false);
-
-  const getInputValueQuest3 = (e) => {
-    e.preventDefault();
-    const userValueQuest3 = refQuest3.current.value;
-    if (userValueQuest3 === "Piano") {
-      setValidQuest3(true);
-      setMessageQuest3("You got the right answer!");
-    } else {
-      setValidQuest3(false);
-      setMessageQuest3("Wrong answer! Try again!");
-    }
-  }
-
-  // For Quest 4
-
-  const refQuest4 = useRef(null);
-  const [messageQuest4, setMessageQuest4] = useState("");
-  const [validQuest4, setValidQuest4] = useState(false);
-
-  const getInputValueQuest4 = (e) => {
-    e.preventDefault();
-    const userValueQuest4 = refQuest4.current.value;
-    if (userValueQuest4 === "Stairs") {
-      setValidQuest4(true);
-      setMessageQuest4("You got the right answer!");
-    } else {
-      setValidQuest4(false);
-      setMessageQuest4("Wrong answer! Try again!");
-    }
-  }
   // Mast
   if (snap.current === "02_-_Default") {
     return (
-      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center tracking-wider">
         You got the 1<sup>st</sup> right answer!!<br />
         Hint for next object: I control the ship to its destination, in the right hinds I challange the currents.
       </div>
@@ -147,7 +75,7 @@ function Details() {
   // Ship staring wheel: Helm
   else if (snap.current === "03_-_Default") {
     return (
-      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center tracking-wider">
         You got the 2<sup>nd</sup> right answer!!<br />
         Hint for next object: Challange me and you you will say shiver me tibmers.
       </div>
@@ -156,7 +84,7 @@ function Details() {
   // Cannon
   else if (snap.current === "05_-_Default") {
     return (
-      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center tracking-wider">
         You got the 3<sup>rd</sup> right answer!!<br />
         Hint for next object: I carry your mighty pirates, challange me once and I will show you the fury of my cannons.
       </div>
@@ -165,7 +93,7 @@ function Details() {
   // Ship base
   else if (snap.current === "18_-_Default") {
     return (
-      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center cursor-pointer">
+      <div className="px-2 py-1 bg-white rounded-lg text-xl text-center tracking-wider">
         You got the all answer!!<br />
         Now you have find your soul, challange the SoulBreaker to release it.
       </div>
@@ -193,12 +121,10 @@ export default function FindTheSoul() {
       <div className="grid place-items-center">
 
         <div className="py-2 text-4xl font-semibold text-white">
-          Welcome to Find the Soul
+          Find the Soul
         </div>
 
-        <p className="text-lg text-white m-3">Welcome to the first level: <span className="font-bold">Find the Soul</span> is the main plot where the player finds pieces of their soul by solving riddles in an interactive 3D Model of a Pirate Ship which can be viewed in Augmented Reality.</p>
-
-        <p className="text-lg text-white m-3">Hint: I am a tall spar, or arrangement of spars, erected more or less vertically on the centre-line of a ship or boat. What I am?</p>
+        <p className="text-xl tracking-wider text-white m-3">Hint: I am a tall spar, or arrangement of spars, erected more or less vertically on the centre-line of a ship or boat. What I am?</p>
 
       </div>
 

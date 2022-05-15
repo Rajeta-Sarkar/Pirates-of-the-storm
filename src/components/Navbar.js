@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { isAuthenticated, login, logout } from "../utils/auth";
+import NavIng from "../assets/1296177.svg"
 
 export default function Navbar() {
 
@@ -17,9 +18,10 @@ export default function Navbar() {
 
     return (
         <div >
-            <nav className="flex items-center py-2 flex-wrap px-4 text-fontColor tracking-wide">
-                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl cursor-pointer font-semibold text-white">Pirates of the storm
-                </span></Link>
+            <nav className="flex items-center py-2 flex-wrap px-4 text-fontColor tracking-wide bg-tertiary">
+                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl cursor-pointer font-semibold">Pirates of the storm
+                <img src={NavIng} alt="img" className="w-16 ml-2" /> </span> 
+                </Link>
                 <button className="lg:hidden right-0 absolute md:px-8 px-6 mr-1 mb-1 ease-linear transition-all duration-150" type="button" onClick={() => setShowNavbar(true)} aria-hidden="false" aria-label="button">
                     <HiOutlineMenuAlt3 className="h-7 w-7" aria-hidden="false" />
                 </button>
@@ -50,18 +52,18 @@ export default function Navbar() {
                                     >
 
                                         <Link to="/">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Home</span>
+                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-[#950101] cursor-pointer  ">Home</span>
                                         </Link>
 
                                         <Link to="/findTheSoul">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Find the soul</span>
+                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-[#950101] cursor-pointer  ">Find the soul</span>
                                         </Link>
 
                                         <Link to="/soulBreaker">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Soul breaker</span>
+                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-[#950101] cursor-pointer  ">Soul breaker</span>
                                         </Link>
 
-                                        <button className='bg-blue-600 text-white py-2 px-8 rounded-md ml-2' onClick={() => handleAuth(4, false)}>
+                                        <button className='bg-blue-600   py-2 px-8 rounded-md ml-2' onClick={() => handleAuth(4, false)}>
                                             Logout
                                         </button>
 
@@ -79,18 +81,18 @@ export default function Navbar() {
                     <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full text-xl lg:items-center items-start flex flex-col lg:h-auto space-x-2 mr-12" >
 
                         <Link to="/">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Home</span>
+                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-[#950101] cursor-pointer  ">Home</span>
                         </Link>
 
                         <Link to="/findTheSoul">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Find The soul</span>
+                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-[#950101] cursor-pointer  ">Find The soul</span>
                         </Link>
 
                         <Link to="/soulBreaker">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Soul breaker</span>
+                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-[#950101] cursor-pointer  ">Soul breaker</span>
                         </Link>
 
-                        <button className='bg-[#6F5DE0] text-white py-2 px-8 rounded-md' onClick={() => handleAuth(4, false)}>Logout</button>
+                        <button className='bg-secondary text-white py-2 px-8 rounded-md' onClick={() => handleAuth(4, false)}>Logout</button>
 
                     </div>
                 </div>

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 
 * {
   margin: 0px;
@@ -10,5 +11,5 @@
 }
 
 body {
-  background-color: #1B2431;
+  background-color: #000000;
 }
