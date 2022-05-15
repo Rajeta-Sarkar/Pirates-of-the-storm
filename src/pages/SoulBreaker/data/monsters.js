@@ -21,7 +21,7 @@ const monsters = {
       y: 100
     },
     image: {
-      src: './img/SoulbreakerSprite.png'
+      src: './img/Soulbreaker.png'
     },
     frames: {
       max: 4,
