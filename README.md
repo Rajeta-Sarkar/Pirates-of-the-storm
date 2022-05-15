@@ -3,8 +3,10 @@
 ## The soul breakers curse
 
 ## 📌Tagline
+Real gaming takes the stage.
 
 ## 💡 Inspiration
+The scenario of gaming now a days is more likely to be addictive. The purpose of gaming is to rewind and to spend some leasure time in a way which is enjoyable. The game we created is to spend the free time playing games which aren't addictive and hence it gave us an inspiration.
 
 ## 💻 What it does
 Pirates of the storm is a free web fun game .Here  the person  is on a pirated ship for escaping he need to solve the  hidden mystery and   hidden flag . we can also enjoy  the 3D model of the ship  which create by using an 'augmented reality' where players search the hidden flag and go to next level .
