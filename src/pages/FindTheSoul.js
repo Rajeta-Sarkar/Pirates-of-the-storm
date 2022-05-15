@@ -66,6 +66,10 @@ function Details() {
 
   return (
     <div>{snap.current}</div>
+    // 18_-_Default == ship base
+    // 02_-_Default == mast
+    // 05_-_Default == cannon
+    // 03_-_Default == stering wheel
   )
 }
 
