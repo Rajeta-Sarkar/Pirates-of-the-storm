@@ -114,7 +114,8 @@ class Monster extends Sprite {
 
   faint() {
     document.querySelector('#dialogueBox').innerHTML =
-      this.name + ' is defeated! the spell to break the curse is "Aloha" '
+      this.name +
+      ' is defeated! the spell to break the curse is........"Aloha" '
     gsap.to(this.position, {
       y: this.position.y + 20
     })
