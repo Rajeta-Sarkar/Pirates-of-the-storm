@@ -35,7 +35,7 @@ export default function Home() {
                   </div>
 
                   <div className="text-lg tracking-wide font-[200]">
-                    The story
+                  Emby was a Young Enthusiastic Pirate who went on a voyage to find the end of the world. He reached the End but his ship was caught in a storm and in the eye of it was the most dreaded creature of the sea. Emby has only heard of this creature in legends but now it stood infront of him the          SOUL BREAKER .Emby fought valiantely but to no avail and lost his soul to the soul breaker.Emby wakes up in island beyond lands to find out he is not dead now he has to retrive his souls to walk the land of the living again.....
                   </div>
                 </div>
 
