@@ -113,7 +113,7 @@ class Monster extends Sprite {
   }
 
   faint() {
-    document.querySelector('#dialogueBox').innerHTML = this.name + ' fainted! the key to the safe is'
+    document.querySelector('#dialogueBox').innerHTML = this.name + ' is defeated! the spell to break the curse is "Ahoy" '
     gsap.to(this.position, {
       y: this.position.y + 20
     })
