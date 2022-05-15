@@ -31,7 +31,12 @@ Pirates of the storm is a free web fun game. In the game, the player needs to re
 
 ## 🌐 Best Domain Name from Domain.com
 
-- Register a domain name with .tech from Domain.com.
+- marioner-bay.tech
+- Scrabble-pirate.tech
+- Hunting-pirate.tech
+- Pirate-tactics.tech
+
+
 
 ## 🍻 Dream Big and Create More Cheers with AB InBev
 
