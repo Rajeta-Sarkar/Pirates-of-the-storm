@@ -28,6 +28,7 @@ Pirates of the storm is a free web fun game .Here  the person  is on a pirated s
 ## 🌐 Best Domain Name from Domain.com
 
 - Register a domain name with .tech from Domain.com.
+- gaming-made-fun-with.us
 
 ## 🍻 Dream Big and Create More Cheers with AB InBev
 
